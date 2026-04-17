@@ -69,7 +69,7 @@ class VerilogSimulator:
             logger.debug(f"Created temporary files: {design_path}, {testbench_path}")
             
             # Compile the Verilog code
-            compile_cmd = ["iverilog", "-g2012","-o", os.path.join(temp_dir, "sim"), design_path, testbench_path]
+            compile_cmd = ["iverilog","-o", os.path.join(temp_dir, "sim"), design_path, testbench_path]
             logger.debug(f"Compilation command: {' '.join(compile_cmd)}")
             
             output = ""
